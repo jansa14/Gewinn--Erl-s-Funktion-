@@ -1,0 +1,68 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Gewinn- und Erlösfunktion</title>
+<script>
+
+function fNamefunction() {
+
+  var vAusgabehtml;
+  var vVariabelkosten;
+  var vFixkosten;
+  var vMenge;
+  var vStückpreis;
+  var vPreis;
+  var vStart = 1000;
+  var vErlös;
+  var vGewinn;
+  var vKosten
+
+    vVariabelkosten = parseFloat (document.getElementById("idVariabelkosten").value);
+    vMenge = parseFloat (document.getElementById("idMenge").value);
+    vFixkosten = parseFloat (document.getElementById("idFixkosten").value);
+    vStückrpeis = parseFloat (document.getElementById("idSrückpreis").value);
+
+
+  vAusgabehtml = "";
+  vAusgabehtml = vAusgabehtml  + "<table border=1>";
+  vAusgabehtml = vAusgabehtml + "<tr><th>Menge</th><th>Kosten</th><th>Erlöse</th><th>Gewinn</th><th>Bemerkung</th></tr>";
+
+
+while (vStart <=vMenge){
+
+vKosten = vFixkosten + vVariabelkosten * vStart;
+vErlös = vStart + vStückpreis;
+vGewinn = verlös - vKosten;
+ if (vGewinn<0) {
+vAusgabeHtml = vAusgabeHtml + "<tr><td>" + vStart + "</td><td>" + vKosten + "</td><td>" + vErlös + "</td><td sytle= color:red>" + vGewinn + "</td></tr>";
+}else
+
+vAusgabeHtml = vAusgabeHtml + "<tr><td>" + vStart + "</td><td>" + vKosten + "</td><td>" + vErlös + "</td><td>" + vGewinn + "</td><td>" + "</td><td>" + Gewinnzone "</td></tr>";
+}
+
+vStart = vStart + 1000;
+
+
+
+
+vAusgabeHtml = vAusgabeHtml + "</table><br><br>"
+
+  }
+</script>
+</head>
+<body>
+<h1>Gewinn- und Erlösfunktion</h1>
+
+<p>Kosten-variabel (k): <input id="idVariabel Kosten" type="text" value="4.50" size="10">
+Kosten-fix: <input id="idFixkosten" type="text" value="12800">
+<p>Produtkionsmenge: <input id="idMenge" type="text" value="20000" size0"10">
+  Stückpreis: <input id="idStückpreis" type="text" value="6.00">
+<p> <button onclick="fNamefunction();">Kostentabelle! </button>
+
+<div id="idAusgabehtml"></div>
+
+
+
+
+</body>
+</html>
