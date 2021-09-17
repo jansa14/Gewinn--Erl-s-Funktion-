@@ -1,1 +1,1 @@
-# Gewinn--Erl-s-Funktion-
+# Gewinn- Erloes Funktion 
